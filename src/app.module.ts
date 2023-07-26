@@ -7,6 +7,7 @@ import { CronModule } from './cron/cron.module';
 import { FibonacciModule } from './fibonacci/fibonacci.module';
 import { HttpClientModule } from './http-client/http-client.module';
 import { EntityExistsPipe } from './common/pipes/entity-exists.pipe';
+import { RecipesModule } from './recipes/recipes.module';
 
 @Module({
   imports: [
@@ -15,6 +16,7 @@ import { EntityExistsPipe } from './common/pipes/entity-exists.pipe';
     CronModule,
     FibonacciModule,
     HttpClientModule.register({ baseUrl: 'http://nestjs.com' }),
+    RecipesModule,
     // HttpClientModule.registerAsync({
     //   useFactory: () => ({ baseUrl: 'http://nestjs.com' }),
     // }),
