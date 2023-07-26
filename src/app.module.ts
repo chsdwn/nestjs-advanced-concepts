@@ -6,6 +6,7 @@ import { SchedulerModule } from './scheduler/scheduler.module';
 import { CronModule } from './cron/cron.module';
 import { FibonacciModule } from './fibonacci/fibonacci.module';
 import { HttpClientModule } from './http-client/http-client.module';
+import { EntityExistsPipe } from './common/pipes/entity-exists.pipe';
 
 @Module({
   imports: [
