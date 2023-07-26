@@ -18,3 +18,7 @@
 #### Result
 
 ![Madge graph result](./graph.png)
+
+### Make HTTP Requests with Curl
+
+- `$ curl -H "Content-Type: application/json" localhost:3000/coffees -d "{}"`
