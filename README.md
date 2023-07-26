@@ -22,3 +22,4 @@
 ### Make HTTP Requests with Curl
 
 - `$ curl -H "Content-Type: application/json" localhost:3000/coffees -d "{}"`
+- `$ curl -X GET -w "\nTotal: %{time_total}s\n" "localhost:3000/fibonacci?n=41"`
