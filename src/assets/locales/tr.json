@@ -1,0 +1,6 @@
+{
+  "HELLO": "Merhaba {firstName}",
+  "ERRORS": {
+    "USER_NOT_FOUND": "Kullanıcı {firstName} mevcut değil"
+  }
+}
