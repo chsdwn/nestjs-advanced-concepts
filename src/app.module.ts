@@ -1,4 +1,5 @@
 import { Module } from '@nestjs/common';
+import { ContextIdFactory } from '@nestjs/core';
 import { EventEmitterModule } from '@nestjs/event-emitter';
 
 import { AppController } from './app.controller';
@@ -11,6 +12,11 @@ import { HttpClientModule } from './http-client/http-client.module';
 import { RecipesModule } from './recipes/recipes.module';
 import { TagsModule } from './tags/tags.module';
 import { PaymentsModule } from './payments/payments.module';
+import { DataSourceModule } from './data-source/data-source.module';
+import { UsersModule } from './users/users.module';
+import { AggregateByTenantContextIdStrategy } from './core/aggregate-by-tenant.strategy';
+
+ContextIdFactory.apply(new AggregateByTenantContextIdStrategy());
 
 @Module({
   imports: [
@@ -23,6 +29,8 @@ import { PaymentsModule } from './payments/payments.module';
     RecipesModule,
     TagsModule,
     PaymentsModule,
+    DataSourceModule,
+    UsersModule,
     // HttpClientModule.registerAsync({
     //   useFactory: () => ({ baseUrl: 'http://nestjs.com' }),
     // }),
